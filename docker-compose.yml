@@ -1,0 +1,7 @@
+services:
+  pl-analytics:
+    build: .
+    container_name: pl-analytics
+    restart: unless-stopped
+    ports:
+      - "8501:8501"
