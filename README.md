@@ -2,7 +2,7 @@
 
 **[Live demo](https://premier-league-analytics-8uxzw4ybjqet6bf4fkmhe4.streamlit.app)**
 
-A SQL-backed data analytics project covering 11 seasons (2015/16 - 2025/26) of Premier League matches. Raw match data is normalized into a relational database, then queried to answer questions about home advantage, betting favorites, and referee tendencies. Results are served through an interactive dashboard, containerized and deployed on a self-hosted server.
+A SQL-backed data analytics project covering 11 seasons (2015/16 - 2025/26) of Premier League matches. Raw match data is normalized into a relational database, then queried to answer questions about home advantage, betting favorites, and referee tendencies. Results are served through an interactive dashboard, deployed on Streamlit Community Cloud.
 
 ## Tech stack
 
@@ -10,9 +10,8 @@ A SQL-backed data analytics project covering 11 seasons (2015/16 - 2025/26) of P
 - SQLite
 - SQL (schema design, CTEs, aggregations)
 - Streamlit, Plotly
-- Docker, Docker Compose
-- Cloudflare Tunnel
-- Also deployable via Docker Compose + Cloudflare Tunnel (self-hosted)
+- Docker, Docker Compose (self-hosted deployment option)
+- Cloudflare Tunnel (self-hosted deployment option)
 
 ## Data source
 
@@ -40,7 +39,7 @@ python scripts/load_data.py
 streamlit run dashboard/app.py
 ```
 
-With Docker:
+With Docker (self-hosted alternative):
 ```
 docker compose up -d --build
 ```
