@@ -6,6 +6,11 @@ import streamlit as st
 
 sys.path.append(str(Path(__file__).resolve().parent.parent / "scripts"))
 
+DB_PATH = Path(__file__).resolve().parent.parent / "db" / "premier_league.db"
+if not DB_PATH.exists():
+    import load_data
+    load_data.main()
+
 from queries import (
     get_connection,
     get_favorite_win_rate_overall,
